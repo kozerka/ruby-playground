@@ -8,7 +8,7 @@
           </h2>
           <p class="block mt-1 text-lg leading-tight font-medium text-black"><%= blog_post.body %></p>
         </div>
-        <p class="mt-2 text-gray-500 self-end"><%= blog_post.created_at.strftime("%B %e, %Y") %></p>
+        <div class="mt-2 text-gray-500 self-end flex "> <%= heroicon "calendar-days", options: { variant: :outline, class: "mx-1 h-6 w-6" } %><%= blog_post.created_at.strftime("%B %e, %Y") %></div>
       </div>
     </div>
   <% end %>

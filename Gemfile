@@ -56,6 +56,7 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+gem 'heroicon'
 
 gem "jsbundling-rails", "~> 1.3"
 
