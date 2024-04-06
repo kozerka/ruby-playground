@@ -3,9 +3,9 @@
     <div class="w-full lg:w-1/2 px-4 mb-4 md:mb-0">
       <div class="rounded-lg bg-white border p-8 overflow-hidden m-4">
         <div class="p-4">
-          <div class="uppercase tracking-wide text-sm text-blue-700 font-semibold">
-            <%= link_to blog_post.title, "/blog_posts/#{blog_post.id}" %>
-          </div>
+          <h2 class="uppercase tracking-wide text-sm text-blue-700 text-lg font-semibold hover:underline">
+            <%= link_to blog_post.title, blog_post_path(blog_post.id) %>
+          </h2>
           <p class="block mt-1 text-lg leading-tight font-medium text-black"><%= blog_post.body %></p>
           <p class="mt-2 text-gray-500"><%= blog_post.created_at.strftime("%B %e, %Y") %></p>
         </div>
