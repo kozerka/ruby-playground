@@ -1,14 +1,14 @@
-<div class="flex flex-wrap  max-w-[1440px] mx-auto">
+<div class="flex flex-wrap max-w-[1440px] mx-auto">
   <% @blog_posts.each do |blog_post| %>
     <div class="w-full lg:w-1/2 px-4 mb-4 md:mb-0">
-      <div class="rounded-lg bg-white border p-8 overflow-hidden m-4">
-        <div class="p-4">
-          <h2 class="uppercase tracking-wide text-sm text-blue-700 text-lg font-semibold hover:underline">
+      <div class="flex flex-col justify-between rounded-lg bg-white border p-8 overflow-hidden m-4 h-full">
+        <div>
+          <h2 class="uppercase tracking-wide text-sm text-blue-700 pb-4 text-xl font-semibold hover:underline">
             <%= link_to blog_post.title, blog_post %>
           </h2>
           <p class="block mt-1 text-lg leading-tight font-medium text-black"><%= blog_post.body %></p>
-          <p class="mt-2 text-gray-500"><%= blog_post.created_at.strftime("%B %e, %Y") %></p>
         </div>
+        <p class="mt-2 text-gray-500 self-end"><%= blog_post.created_at.strftime("%B %e, %Y") %></p>
       </div>
     </div>
   <% end %>
