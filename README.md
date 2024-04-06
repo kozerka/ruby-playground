@@ -1,24 +1,33 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Ruby on Rails 7 Application Setup with Tailwind CSS
+Before you begin, ensure you have the following installed on your system:
+- Git
+- Ruby and Bundler
+- Yarn
+Follow these steps to set up your development environment after cloning the repository:
 
-Things you may want to cover:
+## 1. Clone the repository
 
-* Ruby version
+First, clone the repository to your local machine using Git:
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```bash
+git clone <repository-url>
+```
+## 2. Navigate to the project directory
+Change into the project directory:
+```bash
+cd <project-name>
+```
+## 3. Install Yarn dependencies
+```bash
+yarn install
+```
+## 4. Install Ruby gems
+```bash
+bundle install
+```
+## 5. Start the development server
+```bash
+bin/dev
+```
