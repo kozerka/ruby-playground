@@ -1,1 +1,12 @@
-<h1>new post form</h1>
+<h1 class="text-4xl font-bold text-center my-8">Write a new post</h1>
+<%= form_with model: @blog_post, class: "max-w-4xl mx-auto" do |form| %>
+  <div class="mb-6">
+    <%= form.label :title, class: "block text-gray-700 text-sm font-bold mb-2" %>
+    <%= form.text_field :title, class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
+  </div>
+  <div class="mb-6">
+    <%= form.label :body, class: "block text-gray-700 text-sm font-bold mb-2" %>
+    <%= form.text_area :body, class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline", rows: 10 %>
+  </div>
+  <%= form.button "Create Post", class: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" %>
+<% end %>
