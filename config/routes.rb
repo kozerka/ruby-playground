@@ -1,12 +1,13 @@
 Rails.application.routes.draw do
-  # Twoje istniejące trasy
-  get 'home/index'
+  get 'errors/not_found'
 
-  # Dodaj nowe trasy
+  # Trasy
   get 'pierwsza', to: 'pages#pierwsza'
   get 'druga', to: 'pages#druga'
   get 'trzecia', to: 'pages#trzecia'
 
   # Trasa główna
   root 'home#index'
+
+  match '*path', to: 'errors#not_found', via: :all
 end
