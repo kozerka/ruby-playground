@@ -3,10 +3,19 @@
     <div class="w-full lg:w-1/2 px-4 mb-4 md:mb-0">
       <div class="flex flex-col justify-between rounded-lg bg-white border p-8 overflow-hidden m-4 h-full">
         <div>
-          <h2 class="uppercase tracking-wide text-sm text-blue-700 pb-4 text-xl font-semibold hover:underline">
+          <h2 class="uppercase tracking-wide text-xl font-bold text-gray-700  pb-2 hover:underline">
             <%= link_to blog_post.title, blog_post %>
           </h2>
-          <p class="block mt-1 text-lg leading-tight font-medium text-black"><%= blog_post.body %></p>
+          <div class="flex flex-col">
+            <div class="overflow-hidden text-ellipsis block mt-1 text-lg leading-tight text-black" style="display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;">
+              <%= blog_post.body %>
+            </div>
+          <div class="mt-2 text-gray-500 flex items-center">
+            <%= heroicon "magnifying-glass", options: { variant: :outline, class: "mx-1 h-6 w-6 text-blue-600" } %>
+            <%= link_to 'Read more', blog_post, class: "text-blue-600 hover:text-blue-800 hover:underline" %>
+          </div>
+
+          </div>
         </div>
         <div class="mt-2 text-gray-500 self-end flex "> <%= heroicon "calendar-days", options: { variant: :outline, class: "mx-1 h-6 w-6" } %><%= blog_post.created_at.strftime("%B %e, %Y") %></div>
       </div>
