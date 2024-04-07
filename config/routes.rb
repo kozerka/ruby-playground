@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   get 'blog_posts/index'
   get 'errors/not_found'
 

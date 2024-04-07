@@ -1,8 +1,17 @@
-<nav class="bg-gray-800 p-4 text-white">
+<nav class="bg-gray-800 p-4 text-white flex justify-between items-center">
+  <div>
+    <%= link_to root_path, class: "text-white hover:text-blue-500" do %>
+      <%= heroicon "home", options: { variant: :outline, class: "mx-1 h-8 w-8" } %>
+    <% end %>
+  </div>
   <ul class="flex space-x-4">
-    <li><%= link_to 'Home', root_path, class: "hover:bg-gray-700 rounded px-3 py-2" %></li>
+    <li><%= link_to 'Blog Home Page', root_path, class: "hover:bg-gray-700 rounded px-3 py-2" %></li>
     <li><%= link_to 'Pierwsza', pierwsza_path, class: "hover:bg-gray-700 rounded px-3 py-2" %></li>
     <li><%= link_to 'Druga', druga_path, class: "hover:bg-gray-700 rounded px-3 py-2" %></li>
     <li><%= link_to 'Trzecia', trzecia_path, class: "hover:bg-gray-700 rounded px-3 py-2" %></li>
+  </ul>
+  <ul class="flex space-x-4">
+    <li><%= link_to 'Sign up', new_user_registration_path, class: "hover:bg-blue-700 bg-blue-500 rounded px-3 py-2" %></li>
+    <li><%= link_to 'Log in', new_user_session_path, class: "hover:bg-red-700 bg-red-500 rounded px-3 py-2" %></li>
   </ul>
 </nav>
