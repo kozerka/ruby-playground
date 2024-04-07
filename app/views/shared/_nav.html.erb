@@ -11,7 +11,13 @@
     <li><%= link_to 'Trzecia', trzecia_path, class: "hover:bg-gray-700 rounded px-3 py-2" %></li>
   </ul>
   <ul class="flex space-x-4">
-    <li><%= link_to 'Sign up', new_user_registration_path, class: "hover:bg-blue-700 bg-blue-500 rounded px-3 py-2" %></li>
-    <li><%= link_to 'Log in', new_user_session_path, class: "hover:bg-red-700 bg-red-500 rounded px-3 py-2" %></li>
+    <% unless user_signed_in? %>
+      <li><%= link_to 'Sign up', new_user_registration_path, class: "hover:bg-blue-700 bg-blue-500 text-white rounded px-3 py-2" %></li>
+      <li><%= link_to 'Log in', new_user_session_path, class: "hover:bg-red-700 bg-red-500 text-white rounded px-3 py-2" %></li>
+    <% else %>
+        <li class="m-2 p-0"><%= link_to "Profil", edit_user_registration_path, class: "hover:bg-blue-700 bg-blue-500 text-white rounded px-3 py-2" %></li>
+        <li "><%= button_to "Log out", destroy_user_session_path, method: :delete,  class: "hover:bg-red-700 bg-red-500 text-white rounded px-3 py-2" %></li>
+    <% end %>
   </ul>
+
 </nav>
