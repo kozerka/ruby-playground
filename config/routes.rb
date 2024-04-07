@@ -4,9 +4,9 @@ Rails.application.routes.draw do
   get 'errors/not_found'
 
   # Trasy
-  get 'pierwsza', to: 'pages#pierwsza'
-  get 'druga', to: 'pages#druga'
-  get 'trzecia', to: 'pages#trzecia'
+  # get 'pierwsza', to: 'pages#pierwsza'
+  # get 'druga', to: 'pages#druga'
+  # get 'trzecia', to: 'pages#trzecia'
 
   resources :blog_posts
 
